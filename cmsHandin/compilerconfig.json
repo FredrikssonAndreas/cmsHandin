@@ -46,5 +46,93 @@
   {
     "outputFile": "wwwroot/scss/mixins/mixins.css",
     "inputFile": "wwwroot/scss/mixins/mixins.scss"
+  },
+  {
+    "outputFile": "wwwroot/scss/main.css",
+    "inputFile": "wwwroot/scss/main.scss"
+  },
+  {
+    "outputFile": "wwwroot/scss/mixins/mixins-buttons.css",
+    "inputFile": "wwwroot/scss/mixins/mixins-buttons.scss"
+  },
+  {
+    "outputFile": "wwwroot/scss/misc/base.css",
+    "inputFile": "wwwroot/scss/misc/base.scss"
+  },
+  {
+    "outputFile": "wwwroot/scss/components/links.css",
+    "inputFile": "wwwroot/scss/components/links.scss"
+  },
+  {
+    "outputFile": "wwwroot/scss/components/typography.css",
+    "inputFile": "wwwroot/scss/components/typography.scss"
+  },
+  {
+    "outputFile": "wwwroot/scss/components/wrapper.css",
+    "inputFile": "wwwroot/scss/components/wrapper.scss"
+  },
+  {
+    "outputFile": "wwwroot/scss/misc/misc.css",
+    "inputFile": "wwwroot/scss/misc/misc.scss"
+  },
+  {
+    "outputFile": "wwwroot/scss/mixins/mixins-content.css",
+    "inputFile": "wwwroot/scss/mixins/mixins-content.scss"
+  },
+  {
+    "outputFile": "wwwroot/scss/mixins/mixins-media.css",
+    "inputFile": "wwwroot/scss/mixins/mixins-media.scss"
+  },
+  {
+    "outputFile": "wwwroot/scss/mixins/mixins-typography.css",
+    "inputFile": "wwwroot/scss/mixins/mixins-typography.scss"
+  },
+  {
+    "outputFile": "wwwroot/scss/sections/brands.css",
+    "inputFile": "wwwroot/scss/sections/brands.scss"
+  },
+  {
+    "outputFile": "wwwroot/scss/sections/footer.css",
+    "inputFile": "wwwroot/scss/sections/footer.scss"
+  },
+  {
+    "outputFile": "wwwroot/scss/sections/header.css",
+    "inputFile": "wwwroot/scss/sections/header.scss"
+  },
+  {
+    "outputFile": "wwwroot/scss/sections/sections.css",
+    "inputFile": "wwwroot/scss/sections/sections.scss"
+  },
+  {
+    "outputFile": "wwwroot/scss/sections/home/aboutUs.css",
+    "inputFile": "wwwroot/scss/sections/home/aboutUs.scss"
+  },
+  {
+    "outputFile": "wwwroot/scss/sections/home/clients.css",
+    "inputFile": "wwwroot/scss/sections/home/clients.scss"
+  },
+  {
+    "outputFile": "wwwroot/scss/sections/home/hero.css",
+    "inputFile": "wwwroot/scss/sections/home/hero.scss"
+  },
+  {
+    "outputFile": "wwwroot/scss/sections/home/home.css",
+    "inputFile": "wwwroot/scss/sections/home/home.scss"
+  },
+  {
+    "outputFile": "wwwroot/scss/sections/home/ourServices.css",
+    "inputFile": "wwwroot/scss/sections/home/ourServices.scss"
+  },
+  {
+    "outputFile": "wwwroot/scss/sections/home/project.css",
+    "inputFile": "wwwroot/scss/sections/home/project.scss"
+  },
+  {
+    "outputFile": "wwwroot/scss/sections/home/story.css",
+    "inputFile": "wwwroot/scss/sections/home/story.scss"
+  },
+  {
+    "outputFile": "wwwroot/scss/theme.css",
+    "inputFile": "wwwroot/scss/theme.scss"
   }
 ]
