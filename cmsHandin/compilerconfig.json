@@ -1,0 +1,50 @@
+﻿[
+  {
+    "outputFile": "wwwroot/scss/color/mixins/mixins-colors.css",
+    "inputFile": "wwwroot/scss/color/mixins/mixins-colors.scss"
+  },
+  {
+    "outputFile": "wwwroot/scss/color/backgrounds.css",
+    "inputFile": "wwwroot/scss/color/backgrounds.scss"
+  },
+  {
+    "outputFile": "wwwroot/scss/color/base.css",
+    "inputFile": "wwwroot/scss/color/base.scss"
+  },
+  {
+    "outputFile": "wwwroot/scss/color/buttons.css",
+    "inputFile": "wwwroot/scss/color/buttons.scss"
+  },
+  {
+    "outputFile": "wwwroot/scss/color/colors.css",
+    "inputFile": "wwwroot/scss/color/colors.scss"
+  },
+  {
+    "outputFile": "wwwroot/scss/color/headings.css",
+    "inputFile": "wwwroot/scss/color/headings.scss"
+  },
+  {
+    "outputFile": "wwwroot/scss/color/links.css",
+    "inputFile": "wwwroot/scss/color/links.scss"
+  },
+  {
+    "outputFile": "wwwroot/scss/color/root.css",
+    "inputFile": "wwwroot/scss/color/root.scss"
+  },
+  {
+    "outputFile": "wwwroot/scss/components/button.css",
+    "inputFile": "wwwroot/scss/components/button.scss"
+  },
+  {
+    "outputFile": "wwwroot/scss/components/components.css",
+    "inputFile": "wwwroot/scss/components/components.scss"
+  },
+  {
+    "outputFile": "wwwroot/scss/components/container.css",
+    "inputFile": "wwwroot/scss/components/container.scss"
+  },
+  {
+    "outputFile": "wwwroot/scss/mixins/mixins.css",
+    "inputFile": "wwwroot/scss/mixins/mixins.scss"
+  }
+]
