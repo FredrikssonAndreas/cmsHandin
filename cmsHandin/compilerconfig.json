@@ -150,5 +150,17 @@
   {
     "outputFile": "wwwroot/scss/sections/about/reviews.css",
     "inputFile": "wwwroot/scss/sections/about/reviews.scss"
+  },
+  {
+    "outputFile": "wwwroot/scss/sections/contact/contact.css",
+    "inputFile": "wwwroot/scss/sections/contact/contact.scss"
+  },
+  {
+    "outputFile": "wwwroot/scss/sections/contact/map.css",
+    "inputFile": "wwwroot/scss/sections/contact/map.scss"
+  },
+  {
+    "outputFile": "wwwroot/scss/sections/letUsKnow.css",
+    "inputFile": "wwwroot/scss/sections/letUsKnow.scss"
   }
 ]

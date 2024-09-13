@@ -3,8 +3,9 @@
 @{
 	Layout = "mainLayout.cshtml";
 	ViewBag.Title = Model?.Value("pageTitle") ?? null;
+	
 }
 
-@await Html.PartialAsync("pages/about/aboutTina")
-@await Html.PartialAsync("pages/about/reviews")
 @await Html.PartialAsync("static/letUsKnow")
+@await Html.PartialAsync("pages/contact/map")
+@await Html.PartialAsync("static/brands")
