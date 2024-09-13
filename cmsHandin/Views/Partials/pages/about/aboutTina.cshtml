@@ -1,0 +1,19 @@
+﻿@using Umbraco.Cms.Web.Common.PublishedModels;
+@inherits Umbraco.Cms.Web.Common.Views.UmbracoViewPage;
+@{
+    var aboutTinaImage = Model?.Value<IPublishedContent>("aboutTinaImage")?.Url() ?? "";
+}
+
+<section class="about-tina">
+    <div class="container">
+        <div class="content-left">
+            <img src="@aboutTinaImage" alt="Tina Fox">
+            <p>Tina Fox - CEO & Founder at Onatrix</p>
+        </div>
+
+        <div class="content-right">
+            <p class="quote">“We have over 25 years of experience providing expert financial advice to both businesses and individuals.”</p>
+            <p>@Model.Value("aboutTinaText")</p>
+        </div>
+    </div>
+</section>

@@ -134,5 +134,21 @@
   {
     "outputFile": "wwwroot/scss/theme.css",
     "inputFile": "wwwroot/scss/theme.scss"
+  },
+  {
+    "outputFile": "wwwroot/scss/sections/breadcrumb.css",
+    "inputFile": "wwwroot/scss/sections/breadcrumb.scss"
+  },
+  {
+    "outputFile": "wwwroot/scss/sections/about/about.css",
+    "inputFile": "wwwroot/scss/sections/about/about.scss"
+  },
+  {
+    "outputFile": "wwwroot/scss/sections/about/aboutTina.css",
+    "inputFile": "wwwroot/scss/sections/about/aboutTina.scss"
+  },
+  {
+    "outputFile": "wwwroot/scss/sections/about/reviews.css",
+    "inputFile": "wwwroot/scss/sections/about/reviews.scss"
   }
 ]

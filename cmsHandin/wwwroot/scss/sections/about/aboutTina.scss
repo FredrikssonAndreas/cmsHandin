@@ -1,0 +1,108 @@
+@import "../../mixins/mixins-media.scss";
+
+.about-tina {
+
+    .container {
+        padding: 30px 0;
+
+        @include desktop {
+            display: flex;
+            gap: 50px;
+            padding: 6rem 2rem;
+        }
+
+        .content-left {
+
+            img {
+            }
+
+            p {
+                margin-top: 10px;
+                font-size: 16px;
+                font-style: italic;
+            }
+        }
+
+        .content-right {
+            // .quote {
+            //     font-size: 20px;
+            //     font-style: italic;
+            // }
+
+            p {
+            }
+        }
+    }
+}
+
+.review-for-our-service {
+    position: relative;
+
+    @include desktop {
+        height: 511px;
+    }
+
+    .container {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-areas: "right" "left";
+
+        @include desktop {
+            display: flex;
+            gap: 20px;
+        }
+
+        .content-left {
+            grid-area: left;
+            padding: 20px 20px;
+
+            @include desktop {
+                max-width: 630px;
+                padding: 85px 0 0 0;
+                ;
+            }
+
+            h6 {
+                font-weight: 700;
+            }
+
+            h2 {
+                font-weight: 700;
+            }
+            // .quote {
+            //     font-size: 20px;
+            //     font-style: italic;
+            //     color: #999999;
+            // }
+
+            span {
+                color: var(--color-dark);
+            }
+
+            .name {
+                color: var(--color-dark);
+            }
+
+            .company {
+                color: var(--color-dark);
+                font-size: 20px;
+                font-style: italic;
+            }
+        }
+
+        .content-right {
+            grid-area: right;
+
+            img {
+                width: 90%;
+                margin-bottom: 15px;
+
+                @include desktop {
+                    width: auto;
+                    position: absolute;
+                    right: -15rem;
+                }
+            }
+        }
+    }
+}
