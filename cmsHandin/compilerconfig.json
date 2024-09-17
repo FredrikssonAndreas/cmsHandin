@@ -162,5 +162,13 @@
   {
     "outputFile": "wwwroot/scss/sections/letUsKnow.css",
     "inputFile": "wwwroot/scss/sections/letUsKnow.scss"
+  },
+  {
+    "outputFile": "wwwroot/scss/sections/service/service.css",
+    "inputFile": "wwwroot/scss/sections/service/service.scss"
+  },
+  {
+    "outputFile": "wwwroot/scss/sections/service/singleService.css",
+    "inputFile": "wwwroot/scss/sections/service/singleService.scss"
   }
 ]

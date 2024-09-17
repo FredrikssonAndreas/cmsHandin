@@ -8,11 +8,11 @@
     <div class="container">
         <div class="content-left">
             <img src="@aboutTinaImage" alt="Tina Fox">
-            <p>Tina Fox - CEO & Founder at Onatrix</p>
+            <p>@Model.Value("aboutTinaName")</p>
         </div>
 
         <div class="content-right">
-            <p class="quote">“We have over 25 years of experience providing expert financial advice to both businesses and individuals.”</p>
+            <p class="quote">@Model.Value("aboutTinaQuote")</p>
             <p>@Model.Value("aboutTinaText")</p>
         </div>
     </div>

@@ -54,6 +54,8 @@
                     var nameToDisplay = isFirstItem ? homePageDisplayName : item.Name ;
                     <div><a class="gray-link" href="@item.Url(PublishedUrlProvider)">@nameToDisplay</a></div>
                     <p>></p>
+
+                    isFirstItem = false;
                 }                
                     <div class="active">@Model?.Name</div>
                 </div>
