@@ -3257,20 +3257,30 @@ h6 {
 .our-services .container .projects-grid {
   gap: 20px;
 }
-.our-services .container .projects-grid .box {
+.our-services .container .projects-grid a {
+  text-decoration: none;
+}
+.our-services .container .projects-grid a .box {
   margin-top: 5px;
   padding: 20px 0;
   background-color: var(--color-light);
   width: 370px;
   height: 423px;
+  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
-.our-services .container .projects-grid .box h5 {
+.our-services .container .projects-grid a .box:hover {
+  transform: scale(1.05);
+  box-shadow: 0px 15px 30px rgba(0, 0, 0, 0.2);
+}
+.our-services .container .projects-grid a .box h5 {
   font-weight: 600;
   padding: 0 0 20px 20px;
 }
-.our-services .container .projects-grid .box .text {
+.our-services .container .projects-grid a .box .text {
   font-size: 14px;
   padding: 25px 0 0 20px;
+  color: #171717;
 }
 
 .container {
