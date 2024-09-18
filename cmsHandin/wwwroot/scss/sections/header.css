@@ -43,9 +43,11 @@ header .header-top-info .container {
 header .header-top-info .container a {
   text-decoration: none;
   color: var(--color-light);
+  transition: ease-in-out 0.3s;
 }
 header .header-top-info .container a:hover {
   color: var(--color-accent);
+  transform: scale(1.05);
 }
 header .header-top-info .container a p {
   padding-bottom: 10px;
@@ -54,6 +56,7 @@ header .header-top-info .container .social-media {
   display: flex;
   justify-content: center;
   align-items: center;
+  transition: ease-in-out 0.3s;
 }
 header .header-top-info .container .social-media a {
   color: var(--color-light);
@@ -65,6 +68,7 @@ header .header-top-info .container .social-media a[target=_blank]::after {
 }
 header .header-top-info .container .social-media a:hover {
   color: var(--color-accent);
+  transform: scale(1.05);
 }
 header .header-top-info .container .social-media .facebook {
   border-left: 1px solid var(--color-light);
@@ -94,6 +98,10 @@ header .header-nav .container {
 header .header-nav .container img {
   grid-area: img;
   padding-left: 30px;
+  transition: ease-in-out 0.3s;
+}
+header .header-nav .container img:hover {
+  transform: scale(1.05);
 }
 @media (min-width: 768px) {
   header .header-nav .container img {

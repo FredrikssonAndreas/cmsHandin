@@ -30,8 +30,14 @@
             //     font-style: italic;
             // }
 
-            img {
+            img.fade {
                 margin-bottom: 5px;
+                opacity: 0; 
+                transition: opacity 1s ease-in-out; 
+            }
+            
+            img.fade.visible {
+                opacity: 1;
             }
 
             p {
