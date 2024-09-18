@@ -14,11 +14,20 @@ header {
                 align-items: baseline;
             }
 
-            p {
-                padding-bottom: 10px;
+            a {
+                text-decoration: none;
+                color: var(--color-light);
 
-                @mixin tablet {
-                    padding: 0;
+                &:hover {
+                    color: var(--color-accent);
+                }
+
+                p {
+                    padding-bottom: 10px;
+
+                    @mixin tablet {
+                        padding: 0;
+                    }
                 }
             }
 
@@ -34,6 +43,10 @@ header {
 
                     &[target="_blank"]::after {
                         content: none;
+                    }
+
+                    &:hover {
+                        color: var(--color-accent);
                     }
                 }
 

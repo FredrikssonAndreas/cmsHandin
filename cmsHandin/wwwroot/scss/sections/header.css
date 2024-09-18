@@ -40,7 +40,14 @@ header .header-top-info .container {
     align-items: baseline;
   }
 }
-header .header-top-info .container p {
+header .header-top-info .container a {
+  text-decoration: none;
+  color: var(--color-light);
+}
+header .header-top-info .container a:hover {
+  color: var(--color-accent);
+}
+header .header-top-info .container a p {
   padding-bottom: 10px;
 }
 header .header-top-info .container .social-media {
@@ -55,6 +62,9 @@ header .header-top-info .container .social-media a {
 }
 header .header-top-info .container .social-media a[target=_blank]::after {
   content: none;
+}
+header .header-top-info .container .social-media a:hover {
+  color: var(--color-accent);
 }
 header .header-top-info .container .social-media .facebook {
   border-left: 1px solid var(--color-light);
