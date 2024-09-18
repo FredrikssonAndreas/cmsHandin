@@ -53,6 +53,9 @@ header .header-top-info .container .social-media a {
   padding-left: 10px;
   padding-right: 10px;
 }
+header .header-top-info .container .social-media a[target=_blank]::after {
+  content: none;
+}
 header .header-top-info .container .social-media .facebook {
   border-left: 1px solid var(--color-light);
 }

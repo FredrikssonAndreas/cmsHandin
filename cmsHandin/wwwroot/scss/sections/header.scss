@@ -31,6 +31,10 @@ header {
                     color: var(--color-light);
                     padding-left: 10px;
                     padding-right: 10px;
+
+                    &[target="_blank"]::after {
+                        content: none;
+                    }
                 }
 
                 .facebook {
