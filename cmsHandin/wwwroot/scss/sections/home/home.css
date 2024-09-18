@@ -134,7 +134,7 @@
 .about-us .container .content-left img.fade {
   margin-bottom: 5px;
   opacity: 0;
-  transition: opacity 1s ease-in-out;
+  transition: opacity 2s ease-in-out;
 }
 .about-us .container .content-left img.fade.visible {
   opacity: 1;
