@@ -1,117 +1,64 @@
-﻿ <section class="service-details bg-light">
-                <div class="container">
+﻿@using Umbraco.Cms.Web.Common.PublishedModels;
+@using Umbraco.Cms.Core.Routing; 
+@inherits Umbraco.Cms.Web.Common.Views.UmbracoViewPage
+@inject Umbraco.Cms.Web.Common.UmbracoHelper UmbracoHelper
+@inject IPublishedUrlProvider PublishedUrlProvider
+@{
+    var rootContents = UmbracoHelper.ContentAtRoot();  
+    var singleServiceLeft = rootContents?.FirstOrDefault(x => x.ContentType.Alias == "singleServiceStaticLeft") ?? null;  
+    var singleServiceImageOne = Model?.Value<IPublishedContent>("thumbnail")?.Url() ?? "";
+    var titleLeft = singleServiceLeft?.Value<string>("title") ?? "";
+    var leftImage = singleServiceLeft?.Value<IPublishedContent>("image")?.Url() ?? ""; 
+    var textLeft = singleServiceLeft?.Value<string>("text") ?? "";   
+    var formTitle = singleServiceLeft?.Value<string>("formTitle") ?? ""; 
+    var formText = singleServiceLeft?.Value<string>("formText") ?? "";
+    var placeholderTextLeft = singleServiceLeft?.Value<string>("formPlaceholderText") ?? "";                 
+}
+ 
+ <section class="service-details bg-light">
+    <div class="container">
 
-                    <div class="content">
-                        <nav>
-                            <div class="header-nav">
-                                <h4>About us</h4>
-                                <img src="./images/aboutusnavimage.svg" alt="About us nav image">
-                                <p>Dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non </p>
-                            </div>
-
-                            <div class="box bg-primary">
-                                <h4>How can we help you?</h4>
-                                <p>online support 24/7, we are here to help you</p>
-
-                                <form>
-                                    <input type="email" placeholder="Email address">
-                                    <button><i class="fa-regular fa-envelope"></i></button>
-                                </form>
-                            </div>
-                        </nav>
-
-                        <hr>
-
-                        <div class="info">
-                            <img class="imgOne" src="./images/riskmangementimage1.svg" alt="Risk Management Image 1">
-
-                            <h3>key point</h3>
-
-                            <div class="points">
-                                <div class="point">
-                                    <i class="fa-solid fa-circle"></i>
-                                    <p>Financial planning is the process of helping clients meet their financial needs today and reach their dreams and goals tomorrow.</p>
-                                </div>
-
-                                <div class="point">
-                                    <i class="fa-solid fa-circle"></i>
-                                    <p>Pellentesque fringilla augue quis dolor dapibus semper eget non nibh. Ut lobortis, nulla sed euismod posuere, quam magna scelerisque lectus, auctor iaculis quam ligula nec augue</p>
-                                </div>
-
-                                <div class="point">
-                                    <i class="fa-solid fa-circle"></i>
-                                    <p>In hac habitasse platea dictumst. Aliquam felis ante, tincidunt sed magna auctor, aliquet dapibus turpis.</p>
-                                </div>
-                            </div>
-
-                            <h3>A financial plan is based on a personal relationship</h3>
-
-                            <p>No matter where you find yourself today or see yourself in the future, a financial planning relationship with an Ameriprise financial advisor can help you find your financial balance and bring your dreams and goals more within reach.</p>
-
-                            <p>Our Confident Retirement approach to financial planning begins with a one-on-one conversation. At its core is a personal relationship with an advisor dedicated to helping you reach the future you imagine, on your own terms, in a way that is convenient for you.</p>
-
-                            <p>The financial planning process all starts with learning about you. Your advisor will take the time to:</p>
-
-                            <div class="points">
-                                <div class="point">
-                                    <i class="fa-solid fa-circle"></i>
-                                    <p>Listen closely to you and learn what you value</p>
-                                </div>
-
-                                <div class="point">
-                                    <i class="fa-solid fa-circle"></i>
-                                    <p>Analyze your current financial situation</p>
-                                </div>
-
-                                <div class="point">
-                                    <i class="fa-solid fa-circle"></i>
-                                    <p>Understand your feelings about managing money and investments</p>
-                                </div>
-                            </div>
-
-                            <p>Then your advisor will offer personalized advice and guidance to help you reach your financial goals. Ameriprise advisors have access to a broad array of solutions to help you plan for your confident future.</p>
-
-                            <p>And once you have a plan in place, you may feel more confident knowing that your advisor will stay with you over time, helping you track your progress toward your goals and making adjustments along the way when your life or dreams change.</p>
-
-                            <img class="imgTwo" src="./images/riskmangementimage2.svg" alt="Risk Management Image 2">
-
-                            <h3>We’ll help you achieve financial confidence</h3>
-
-                            <p>Working with a financial advisor may help you come away feeling more confident knowing that you have the support you need to help:</p>
-
-                            <div class="points">
-                                <div class="point">
-                                    <i class="fa-solid fa-circle"></i>
-                                    <p>Cover your essentials. Essentials are the monthly expenses that keep your life running.</p>
-                                </div>
-
-                                <div class="point">
-                                    <i class="fa-solid fa-circle"></i>
-                                    <p>Ensure your lifestyle. Lifestyle is about the things that you want to do, and how you want to live, today and in the future.</p>
-                                </div>
-
-                                <div class="point">
-                                    <i class="fa-solid fa-circle"></i>
-                                    <p>Prepare for the unexpected. The unexpected are events that could derail your financial plans.</p>
-                                </div>
-                                
-                                <div class="point">
-                                    <i class="fa-solid fa-circle"></i>
-                                    <p>Leave a legacy. Legacy is about the impact you’ll make on the people, charities and causes that are important to you.</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="question-form">
-                        <h3>Have a question ?</h3>
-
-                        <form action="#">
-                            <input class="name" type="text" placeholder="Name">
-                            <input class="email" type="email" placeholder="Email">
-                            <textarea class="text" placeholder="Question"></textarea>
-                            <button class="btn btn-primary">Submit</button>
-                        </form>
-                    </div>
+        <div class="content">
+            <nav>
+                <div class="header-nav">
+                    <h4>@titleLeft</h4>
+                    <img src="@leftImage" alt="About us nav image">
+                    <p>@textLeft</p>
                 </div>
-            </section>
+
+                <div class="box bg-primary">
+                    <h4>@formTitle</h4>
+                    <p>@formText</p>
+
+                    <form>
+                        <input type="email" placeholder="@placeholderTextLeft">
+                        <button><i class="fa-regular fa-envelope"></i></button>
+                    </form>
+                </div>
+            </nav>
+
+            
+            <div class="info">
+            
+                <img class="imgOne" src="@singleServiceImageOne" alt="Risk Management Image 1">
+
+                
+                    <p>@Model.Value("serviceContent")</p>
+                
+                    
+             </div>
+         </div>
+        
+
+        <div class="question-form">
+            <h3>Have a question ?</h3>
+
+            <form action="#">
+                <input class="name" type="text" placeholder="Name">
+                <input class="email" type="email" placeholder="Email">
+                <textarea class="text" placeholder="Question"></textarea>
+                <button class="btn btn-primary">Submit</button>
+            </form>
+        </div>
+    </div>   
+</section>
