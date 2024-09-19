@@ -2869,13 +2869,18 @@ h6 {
 .about-us .container .content-left h6 {
   color: var(--color-secondary);
 }
-.about-us .container .content-left img.fade {
+.about-us .container .content-left img {
   margin-bottom: 5px;
+}
+.about-us .container .content-left .fade {
   opacity: 0;
   transition: opacity 2s ease-in-out;
 }
-.about-us .container .content-left img.fade.visible {
+.about-us .container .content-left .fade.visible {
   opacity: 1;
+}
+.about-us .container .content-left .fade.hidden {
+  opacity: 0;
 }
 .about-us .container .content-left p {
   font-size: 10px;
@@ -3026,6 +3031,16 @@ h6 {
   font-size: 14px;
   padding: 25px 0 0 20px;
   color: #171717;
+}
+.our-services .container .fade {
+  opacity: 0;
+  transition: opacity 2s ease-in-out;
+}
+.our-services .container .fade.visible {
+  opacity: 1;
+}
+.our-services .container .fade.hidden {
+  opacity: 0;
 }
 
 .container {

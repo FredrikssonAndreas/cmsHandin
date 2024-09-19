@@ -1,24 +1,26 @@
 ﻿export function fadeInOnScroll() {
-    const fadeInElement = document.querySelector('.about-us img.fade');
-   
+    const fadeInElements = document.querySelectorAll('.fade');
 
     function isElementInViewport(el) {
         const rect = el.getBoundingClientRect();
         return (
-            rect.top >= 0 &&
-            rect.left >= 0 &&
-            rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
-            rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+            rect.top < (window.innerHeight || document.documentElement.clientHeight) && 
+            rect.bottom > 0
         );
     }
 
     function onScroll() {
-        if (isElementInViewport(fadeInElement)) {
-            fadeInElement.classList.add('visible');
-        }
+        fadeInElements.forEach(el => {
+            if (isElementInViewport(el)) {
+                el.classList.add('visible'); 
+                el.classList.remove('hidden'); 
+            } else {
+                el.classList.remove('visible'); 
+                el.classList.add('hidden'); 
+            }
+        });
     }
 
     window.addEventListener('scroll', onScroll);
     onScroll(); 
 }
-

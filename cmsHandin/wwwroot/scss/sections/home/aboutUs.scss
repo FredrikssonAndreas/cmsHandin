@@ -30,15 +30,24 @@
             //     font-style: italic;
             // }
 
-            img.fade {
+            img {
                 margin-bottom: 5px;
-                opacity: 0; 
-                transition: opacity 2s ease-in-out; 
             }
-            
-            img.fade.visible {
+
+            .fade {
+                opacity: 0;
+                transition: opacity 2s ease-in-out;
+            }
+
+            .fade.visible {
                 opacity: 1;
             }
+
+            .fade.hidden{
+                opacity: 0;
+            }
+
+
 
             p {
                 font-size: 10px;
