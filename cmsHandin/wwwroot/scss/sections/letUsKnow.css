@@ -1204,6 +1204,16 @@ h6 {
   z-index: 0;
   z-index: 1;
 }
+.about-project .container .content-left .fade {
+  opacity: 0;
+  transition: opacity 2s ease-in-out;
+}
+.about-project .container .content-left .fade.visible {
+  opacity: 1;
+}
+.about-project .container .content-left .fade.hidden {
+  opacity: 0;
+}
 .about-project .container .content-left .background {
   position: absolute;
   bottom: 0;

@@ -87,3 +87,13 @@
     right: -15rem;
   }
 }
+.review-for-our-service .container .content-right .fade {
+  opacity: 0;
+  transition: opacity 2s ease-in-out;
+}
+.review-for-our-service .container .content-right .fade.visible {
+  opacity: 1;
+}
+.review-for-our-service .container .content-right .fade.hidden {
+  opacity: 0;
+}

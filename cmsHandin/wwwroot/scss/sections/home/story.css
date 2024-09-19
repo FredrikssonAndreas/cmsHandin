@@ -93,3 +93,13 @@
     bottom: -170px;
   }
 }
+.story .container .fade {
+  opacity: 0;
+  transition: opacity 2s ease-in-out;
+}
+.story .container .fade.visible {
+  opacity: 1;
+}
+.story .container .fade.hidden {
+  opacity: 0;
+}
