@@ -170,5 +170,17 @@
   {
     "outputFile": "wwwroot/scss/sections/service/singleService.css",
     "inputFile": "wwwroot/scss/sections/service/singleService.scss"
+  },
+  {
+    "outputFile": "wwwroot/scss/sections/about/ourExperts.css",
+    "inputFile": "wwwroot/scss/sections/about/ourExperts.scss"
+  },
+  {
+    "outputFile": "wwwroot/scss/sections/project/project.css",
+    "inputFile": "wwwroot/scss/sections/project/project.scss"
+  },
+  {
+    "outputFile": "wwwroot/scss/sections/project/projectSection.css",
+    "inputFile": "wwwroot/scss/sections/project/projectSection.scss"
   }
 ]
