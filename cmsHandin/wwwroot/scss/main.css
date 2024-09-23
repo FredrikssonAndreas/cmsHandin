@@ -328,7 +328,7 @@ header .header-top-info .container a {
 }
 header .header-top-info .container a:hover {
   color: var(--color-accent);
-  transform: scale(1.05);
+  transform: scale(1.04);
 }
 header .header-top-info .container a p {
   padding-bottom: 10px;
