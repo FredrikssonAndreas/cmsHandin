@@ -2,8 +2,8 @@
 @inherits Umbraco.Cms.Web.Common.Views.UmbracoViewPage;
 @using Umbraco.Cms.Core.Routing;
 @inject IPublishedUrlProvider PublishedUrlProvider;
-
-
+ 
+ 
 @{
   var content = Umbraco.Content(Guid.Parse("c2ce79c2-e0a9-4ad6-91a0-986307e7e56c"));
   var selection = Enumerable.Empty<IPublishedContent>();
@@ -12,44 +12,41 @@
     {
         selection = content.ChildrenOfType("servicesItemTemplate").Where(x => x.IsVisible());
     }
-
-    var isServicePage = Model.Url(PublishedUrlProvider) == "/service-page/";
-
+    var isServicePage = Model.Url(PublishedUrlProvider) == "/services/";
 }
-  
-
+ 
+ 
 <section class="our-services @(isServicePage ? "bg-light" : "bg-gray")">
     <div class="container">
         <div class="heading">
-            <h6>@Model?.Value("ourServicesHeading")</h6>
-            <h2>
-                @if (isServicePage)
-                {
-                    @Model?.Value("solutionsTitle")
-                }
-                else
-                {
-                    @Model?.Value("ourServicesTitle")
-                }
-            </h2>
+           
+            @if (isServicePage)
+            {
+                <h2>@Model?.Value("solutionsTitle")</h2>
+            }
+            else
+            {
+                <h6>@Model?.Value("ourServicesHeading")</h6>
+                <h2>@Model?.Value("ourServicesTitle")</h2>
+            }
         </div>
  
-        <div class="projects-grid fade">
+        <div class="projects-grid fade">                  
             @foreach (var item in selection){
                 var title = item?.Value<string>("pageTitle") ?? "";
                 var thumbnail = item?.Value<IPublishedContent>("thumbnail")?.Url() ?? "";
                 var description = item?.Value<string>("description") ?? "";                        
-                
+               
                 <a href="@item.Url()">
-                    <div class="box"> 
+                    <div class="box">
                             <h5>@title</h5>
                             <img src="@thumbnail" alt="@item.Name">
                             <p class="text">@description</p>
                     </div>
-                </a>                           
-            }           
+                </a>                          
+            }          
         </div>
     </div>
 </section>
 
-     
+

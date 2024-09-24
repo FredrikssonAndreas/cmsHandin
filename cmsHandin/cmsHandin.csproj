@@ -9,6 +9,7 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="compilerconfig.json" />
+    <Content Include="wwwroot\media\p1wn1mva\projectstaticrightimage.svg" />
     <Content Include="wwwroot\media\0addy4gg\cardfourimage.svg" />
     <Content Include="wwwroot\media\0vaf2kn4\onatrixlogotype.svg" />
     <Content Include="wwwroot\media\1eyfbusb\expertkevin.svg" />
