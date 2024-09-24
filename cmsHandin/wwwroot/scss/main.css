@@ -6955,15 +6955,14 @@ h6 {
 }
 .projects-content .container .content-right nav .buttons {
   grid-area: buttons;
+  display: grid;
+  grid-template-columns: max-content max-content;
+  gap: 10px;
 }
 @media (min-width: 1400px) {
   .projects-content .container .content-right nav .buttons {
     margin-bottom: 9rem;
   }
-}
-.projects-content .container .content-right nav .buttons div {
-  display: flex;
-  gap: 20px;
 }
 .projects-content .container .content-right nav .buttons .btn-light {
   margin-top: 10px;
@@ -6979,7 +6978,7 @@ h6 {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
+  align-items: flex-start;
   border-radius: 3px;
   max-width: 306px;
   height: 223px;
@@ -6991,15 +6990,20 @@ h6 {
     max-width: 350px;
   }
 }
+.projects-content .container .content-right nav .box .formtitle {
+  color: var(--color-accent);
+  padding-top: 30px;
+}
 .projects-content .container .content-right nav .box img {
   position: relative;
   z-index: 0;
+  align-self: flex-end;
+  right: -20px;
 }
 .projects-content .container .content-right nav .box form {
   display: flex;
-  width: 100%;
+  width: 90%;
   position: absolute;
-  max-width: 260px;
   bottom: 30px;
 }
 .projects-content .container .content-right nav .box form input {
