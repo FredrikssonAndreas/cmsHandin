@@ -55,7 +55,8 @@
                 display: grid;
                 grid-template-areas: "head icon" "text icon";
 
-                &:hover {
+                &:hover,
+                .box:hover & {
                     background-color: var(--color-primary);
                     transform: scaleY(1.15);
 

@@ -3348,14 +3348,14 @@ h6 {
   display: grid;
   grid-template-areas: "head icon" "text icon";
 }
-.our-projects .project-flex .box .info-opacity:hover {
+.our-projects .project-flex .box .info-opacity:hover, .box:hover .our-projects .project-flex .box .info-opacity {
   background-color: var(--color-primary);
   transform: scaleY(1.15);
 }
-.our-projects .project-flex .box .info-opacity:hover h5 {
+.our-projects .project-flex .box .info-opacity:hover h5, .box:hover .our-projects .project-flex .box .info-opacity h5 {
   color: var(--color-secondary);
 }
-.our-projects .project-flex .box .info-opacity:hover .croc {
+.our-projects .project-flex .box .info-opacity:hover .croc, .box:hover .our-projects .project-flex .box .info-opacity .croc {
   opacity: 1;
 }
 .our-projects .project-flex .box .info-opacity h5 {
