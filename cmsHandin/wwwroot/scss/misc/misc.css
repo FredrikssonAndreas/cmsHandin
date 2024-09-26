@@ -53,4 +53,5 @@ body {
   font-style: normal;
   font-size: 16px;
   color: #535656;
+  overflow-x: hidden;
 }

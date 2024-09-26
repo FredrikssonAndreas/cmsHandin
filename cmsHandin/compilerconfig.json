@@ -182,5 +182,9 @@
   {
     "outputFile": "wwwroot/scss/sections/project/projectSection.css",
     "inputFile": "wwwroot/scss/sections/project/projectSection.scss"
+  },
+  {
+    "outputFile": "wwwroot/scss/sections/project/singleProject.css",
+    "inputFile": "wwwroot/scss/sections/project/singleProject.scss"
   }
 ]

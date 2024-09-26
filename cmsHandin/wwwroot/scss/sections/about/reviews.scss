@@ -24,7 +24,7 @@
             @include desktop {
                 max-width: 630px;
                 padding: 85px 0 0 0;
-                ;
+                
             }
 
             h6 {
@@ -65,7 +65,7 @@
                 @include desktop {
                     width: auto;
                     position: absolute;
-                    right: -15rem;
+                    right: -20rem;
                 }
             }
 
