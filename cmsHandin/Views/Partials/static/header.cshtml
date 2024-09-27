@@ -1,12 +1,19 @@
-﻿@using Umbraco.Cms.Web.Common.PublishedModels;
-@inherits Umbraco.Cms.Web.Common.Views.UmbracoViewPage
+﻿@inherits Umbraco.Cms.Web.Common.Views.UmbracoViewPage
+@using Umbraco.Cms.Core
+@using Umbraco.Cms.Core.Models.PublishedContent
+@using Umbraco.Cms.Core.Routing
+@using Umbraco.Extensions
 @inject Umbraco.Cms.Web.Common.UmbracoHelper UmbracoHelper
+@inject IPublishedValueFallback PublishedValueFallback
+@inject IPublishedUrlProvider PublishedUrlProvider
 @{
     var rootContents = UmbracoHelper.ContentAtRoot();
     var settings = rootContents?.FirstOrDefault(x => x.ContentType.Alias == "settings") ?? null;
     var officeLocation = settings?.Value<string>("officeLocation") ?? "";
     var siteName = settings?.Value<string>("siteName") ?? ""; 
-    var siteLogotype = settings?.Value<IPublishedContent>("siteLogotype")?.Url() ?? "";       
+    var siteLogotype = settings?.Value<IPublishedContent>("siteLogotype")?.Url() ?? "";      
+
+    var selection = Model.Root().Children.Where(x => x.IsVisible(PublishedValueFallback)).ToArray();        
 }
 
 <header>
@@ -23,7 +30,7 @@
     </div>
     </div>
 
-    <div class="header-nav bg-light">
+    @*<div class="header-nav bg-light">
     <div class="container">
         <a href="/">
             <img src="@siteLogotype" alt="@siteName">
@@ -36,5 +43,27 @@
         </nav>
         <button class="search"><i class="fa-solid fa-magnifying-glass"></i></button>
     </div>
+    </div>*@
+
+    <div class="header-nav bg-light">
+    <div class="container">
+        <a href="/">
+        <img src="@siteLogotype" alt="@siteName">
+        </a>
+        <nav class="head-nav">
+            @if (selection?.Length > 0)
+            {
+     
+                @foreach (var item in selection)
+                {
+                var navTitle = item?.Value<string>("navTitle") ?? "";    
+                <a class="@(item.IsAncestorOrSelf(Model) ? "head-link-active" : "head-link")" href="@item.Url(PublishedUrlProvider)" title="@navTitle">@navTitle</a>
+               
+                }                              
+            }
+           
+        </nav>
+        <button class="search"><i class="fa-solid fa-magnifying-glass"></i></button>
     </div>
+</div>
 </header>

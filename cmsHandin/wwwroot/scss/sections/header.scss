@@ -98,15 +98,18 @@ header {
                 }
             }
 
-            nav {
+            .head-nav {
                 grid-area: nav;
 
-                a {
+
+                .head-link {
                     color: var(--color-primary);
                     text-decoration: none;
                     font-weight: 700;
                     font-size: 1rem;
                     margin: 10px 10px 0 10px;
+                    text-decoration: none;
+
 
                     @include tablet {
                         margin-left: 20px;
@@ -114,12 +117,18 @@ header {
                     }
 
                     &:hover {
-                        text-decoration: underline;
+                        color: var(--color-accent);
                     }
                 }
 
-                .active {
+
+                .head-link-active {
                     color: var(--color-secondary);
+                    text-decoration: none;
+                    font-weight: 700;
+                    font-size: 1rem;
+                    margin: 10px 10px 0 10px;
+                    text-decoration: none;
                 }
             }
 
