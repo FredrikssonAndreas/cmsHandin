@@ -23,11 +23,11 @@
             <div class="form-content">
                 <p>@Model?.Value("aboutUsFormText")</p>
  
-                <form>
-                    <input type="text" placeholder="Name">
-                    <input type="email" placeholder="Email address">
-                    <input type="text" placeholder="Phone">
-                    <select name="service" id="service">
+                <form id="aboutUsForm" novalidate>
+                    <input type="text" id="name" name="name" placeholder="Name" minlenght="2" required>
+                    <input type="email" id="email" name="email" placeholder="Email address">
+                    <input type="text" id="phone" name="phone" placeholder="Phone" minlenght="2" required>
+                    <select name="service" id="service" required>
                         <option value="service">Financial consulting</option>
                         <option value="service1">Service 1</option>
                         <option value="service2">Service 2</option>

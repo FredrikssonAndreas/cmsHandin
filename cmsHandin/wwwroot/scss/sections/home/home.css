@@ -193,22 +193,32 @@
     gap: 20px;
   }
 }
-.about-us .container .content-right .form-content form input {
+.about-us .container .content-right .form-content form input, .about-us .container .content-right .form-content form select {
   padding: 20px 10px;
   border: 1px solid #9C9EA6;
   color: var(--color-dark);
   outline: none;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
 }
-.about-us .container .content-right .form-content form input::placeholder {
+.about-us .container .content-right .form-content form input::placeholder, .about-us .container .content-right .form-content form select::placeholder {
   font-size: 13px;
   color: #9C9EA6;
   font-style: italic;
 }
-.about-us .container .content-right .form-content form select {
-  padding: 20px 10px;
-  border: 1px solid #9C9EA6;
-  color: #535656;
-  outline: none;
+.about-us .container .content-right .form-content form input.is-invalid, .about-us .container .content-right .form-content form select.is-invalid {
+  border-color: red;
+  box-shadow: 0 0 5px rgba(255, 0, 0, 0.5);
+}
+.about-us .container .content-right .form-content form input.is-valid, .about-us .container .content-right .form-content form select.is-valid {
+  border-color: green;
+  box-shadow: 0 0 5px rgba(0, 255, 0, 0.5);
+}
+.about-us .container .content-right .form-content form input:hover, .about-us .container .content-right .form-content form select:hover {
+  border-color: var(--color-primary);
+}
+.about-us .container .content-right .form-content form input:focus, .about-us .container .content-right .form-content form select:focus {
+  border-color: var(--color-accent);
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
 }
 .about-us .container .content-right .form-content form a {
   display: flex;
