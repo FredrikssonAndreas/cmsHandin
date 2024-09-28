@@ -41,6 +41,25 @@
                 max-width: 480px;
             }
 
+            &:hover img {
+                z-index: 2;
+            }
+
+            &:hover .info-opacity {
+                background-color: var(--color-primary);
+                transform: scaleY(1.10);
+                transition: ease-in-out 0.3s;
+                z-index: 3;
+
+                h5 {
+                    color: var(--color-secondary);
+                }
+
+                .croc {
+                    opacity: 1;
+                }
+            }
+
             img {
                 position: relative;
             }
@@ -55,19 +74,6 @@
                 display: grid;
                 grid-template-areas: "head icon" "text icon";
 
-                &:hover,
-                .box:hover & {
-                    background-color: var(--color-primary);
-                    transform: scaleY(1.15);
-
-                    h5 {
-                        color: var(--color-secondary);
-                    }
-
-                    .croc {
-                        opacity: 1;
-                    }
-                }
 
                 h5 {
                     grid-area: head;
