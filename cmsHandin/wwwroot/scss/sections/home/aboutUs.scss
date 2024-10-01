@@ -24,11 +24,7 @@
             h6 {
                 color: var(--color-secondary);
             }
-            // .about-us-quote {
-            //     font-size: 20px;
-            //     font-weight: 300;
-            //     font-style: italic;
-            // }
+
 
             img {
                 margin-bottom: 5px;
@@ -46,8 +42,6 @@
             .fade.hidden {
                 opacity: 0;
             }
-
-
 
             p {
                 font-size: 10px;
@@ -90,14 +84,8 @@
                     }
                 }
 
-                form {
-                    display: flex;
-                    flex-direction: column;
-                    gap: 10px;
+                #aboutUsForm {
 
-                    @include desktop {
-                        gap: 20px;
-                    }
 
                     input, select {
                         padding: 20px 10px;
@@ -111,21 +99,21 @@
                             color: #9C9EA6;
                             font-style: italic;
                         }
-                    
+
                         &.is-invalid {
                             border-color: red;
                             box-shadow: 0 0 5px rgba(255, 0, 0, 0.5);
                         }
-                       
+
                         &.is-valid {
                             border-color: green;
                             box-shadow: 0 0 5px rgba(0, 255, 0, 0.5);
                         }
-                     
+
                         &:hover {
                             border-color: var(--color-primary);
                         }
-                       
+
                         &:focus {
                             border-color: var(--color-accent);
                             box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
@@ -133,10 +121,91 @@
                     }
 
 
-                    a {
+                    .input-form-group {
+                        position: relative;
+                        display: flex;
+                        flex-direction: column;
+                        gap: 10px;
+                        padding-bottom: 10px;
+
+                        input {
+                            padding: 20px 10px;
+                            border: 1px solid #9C9EA6;
+                            color: var(--color-dark);
+                            outline: none;
+
+                            &::placeholder {
+                                font-size: 13px;
+                                color: #9C9EA6;
+                                font-style: italic;
+                            }
+                        }
+
+                        span.form-input-error {
+                            position: absolute;
+                            top: -5px;
+                            left: 0;
+                            color: red;
+                            font-size: 12px;
+                            display: none;
+                        }
+
+
+                        span.form-input-error.form-invalid-input {
+                            display: block;
+                          
+                        }
+                    }
+
+
+                    select {
+                        width: 100%;
+                        padding: 20px 10px;
+                        border: 1px solid #9C9EA6;
+                        color: #535656;
+                        outline: none;
+                        margin-bottom: 10px;
+                    }
+
+                    button {
+                        padding-top: 10px;
+                        width: 100%;
                         display: flex;
                         justify-content: center;
                         align-items: center;
+                    }
+                }
+
+                input, select {
+                    padding: 20px 10px;
+                    border: 1px solid #9C9EA6;
+                    color: var(--color-dark);
+                    outline: none;
+                    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+
+                    &::placeholder {
+                        font-size: 13px;
+                        color: #9C9EA6;
+                        font-style: italic;
+                    }
+
+                    &.is-invalid {
+                        border-color: red;
+                        box-shadow: 0 0 5px rgba(255, 0, 0, 0.5);
+                    }
+
+                    &.is-valid {
+                        border-color: green;
+                        box-shadow: 0 0 5px rgba(0, 255, 0, 0.5);
+                    }
+
+                    &:hover {
+                        border-color: var(--color-primary);
+                    }
+
+                    &:focus {
+                        border-color: var(--color-accent);
+                        box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
                     }
                 }
             }

@@ -3230,47 +3230,103 @@ h6 {
     font-size: 13px;
   }
 }
-.about-us .container .content-right .form-content form {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-}
-@media (min-width: 1400px) {
-  .about-us .container .content-right .form-content form {
-    gap: 20px;
-  }
-}
-.about-us .container .content-right .form-content form input, .about-us .container .content-right .form-content form select {
+.about-us .container .content-right .form-content #aboutUsForm input, .about-us .container .content-right .form-content #aboutUsForm select {
   padding: 20px 10px;
   border: 1px solid #9C9EA6;
   color: var(--color-dark);
   outline: none;
   transition: border-color 0.3s ease, box-shadow 0.3s ease;
 }
-.about-us .container .content-right .form-content form input::placeholder, .about-us .container .content-right .form-content form select::placeholder {
+.about-us .container .content-right .form-content #aboutUsForm input::placeholder, .about-us .container .content-right .form-content #aboutUsForm select::placeholder {
   font-size: 13px;
   color: #9C9EA6;
   font-style: italic;
 }
-.about-us .container .content-right .form-content form input.is-invalid, .about-us .container .content-right .form-content form select.is-invalid {
+.about-us .container .content-right .form-content #aboutUsForm input.is-invalid, .about-us .container .content-right .form-content #aboutUsForm select.is-invalid {
   border-color: red;
   box-shadow: 0 0 5px rgba(255, 0, 0, 0.5);
 }
-.about-us .container .content-right .form-content form input.is-valid, .about-us .container .content-right .form-content form select.is-valid {
+.about-us .container .content-right .form-content #aboutUsForm input.is-valid, .about-us .container .content-right .form-content #aboutUsForm select.is-valid {
   border-color: green;
   box-shadow: 0 0 5px rgba(0, 255, 0, 0.5);
 }
-.about-us .container .content-right .form-content form input:hover, .about-us .container .content-right .form-content form select:hover {
+.about-us .container .content-right .form-content #aboutUsForm input:hover, .about-us .container .content-right .form-content #aboutUsForm select:hover {
   border-color: var(--color-primary);
 }
-.about-us .container .content-right .form-content form input:focus, .about-us .container .content-right .form-content form select:focus {
+.about-us .container .content-right .form-content #aboutUsForm input:focus, .about-us .container .content-right .form-content #aboutUsForm select:focus {
   border-color: var(--color-accent);
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
 }
-.about-us .container .content-right .form-content form a {
+.about-us .container .content-right .form-content #aboutUsForm .input-form-group {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding-bottom: 10px;
+}
+.about-us .container .content-right .form-content #aboutUsForm .input-form-group input {
+  padding: 20px 10px;
+  border: 1px solid #9C9EA6;
+  color: var(--color-dark);
+  outline: none;
+}
+.about-us .container .content-right .form-content #aboutUsForm .input-form-group input::placeholder {
+  font-size: 13px;
+  color: #9C9EA6;
+  font-style: italic;
+}
+.about-us .container .content-right .form-content #aboutUsForm .input-form-group span.form-input-error {
+  position: absolute;
+  top: -5px;
+  left: 0;
+  color: red;
+  font-size: 12px;
+  display: none;
+}
+.about-us .container .content-right .form-content #aboutUsForm .input-form-group span.form-input-error.form-invalid-input {
+  display: block;
+}
+.about-us .container .content-right .form-content #aboutUsForm select {
+  width: 100%;
+  padding: 20px 10px;
+  border: 1px solid #9C9EA6;
+  color: #535656;
+  outline: none;
+  margin-bottom: 10px;
+}
+.about-us .container .content-right .form-content #aboutUsForm button {
+  padding-top: 10px;
+  width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
+}
+.about-us .container .content-right .form-content input, .about-us .container .content-right .form-content select {
+  padding: 20px 10px;
+  border: 1px solid #9C9EA6;
+  color: var(--color-dark);
+  outline: none;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+.about-us .container .content-right .form-content input::placeholder, .about-us .container .content-right .form-content select::placeholder {
+  font-size: 13px;
+  color: #9C9EA6;
+  font-style: italic;
+}
+.about-us .container .content-right .form-content input.is-invalid, .about-us .container .content-right .form-content select.is-invalid {
+  border-color: red;
+  box-shadow: 0 0 5px rgba(255, 0, 0, 0.5);
+}
+.about-us .container .content-right .form-content input.is-valid, .about-us .container .content-right .form-content select.is-valid {
+  border-color: green;
+  box-shadow: 0 0 5px rgba(0, 255, 0, 0.5);
+}
+.about-us .container .content-right .form-content input:hover, .about-us .container .content-right .form-content select:hover {
+  border-color: var(--color-primary);
+}
+.about-us .container .content-right .form-content input:focus, .about-us .container .content-right .form-content select:focus {
+  border-color: var(--color-accent);
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
 }
 
 .container {
@@ -4092,13 +4148,6 @@ h6 {
   }
 }
 
-.map {
-  position: relative;
-}
-.map .img-map {
-  position: relative;
-}
-
 .contact-information .container {
   padding: 20px 0;
 }
@@ -4124,10 +4173,14 @@ h6 {
     top: -27rem;
   }
 }
+.contact-information .container .contact-form h2 {
+  max-width: 45%;
+}
 .contact-information .container .contact-form p {
   font-style: italic;
+  max-width: 50%;
 }
-.contact-information .container .contact-form form {
+.contact-information .container .contact-form #contactForm {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -4136,34 +4189,78 @@ h6 {
   width: 80%;
 }
 @media (min-width: 768px) {
-  .contact-information .container .contact-form form {
+  .contact-information .container .contact-form #contactForm {
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-areas: "name phone" "email select" "button button";
   }
 }
-.contact-information .container .contact-form form input {
+.contact-information .container .contact-form #contactForm input, .contact-information .container .contact-form #contactForm select {
   padding: 20px 10px;
   border: 1px solid #9C9EA6;
   color: var(--color-dark);
   outline: none;
-  border-radius: 3px;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
 }
-.contact-information .container .contact-form form input::placeholder {
+.contact-information .container .contact-form #contactForm input::placeholder, .contact-information .container .contact-form #contactForm select::placeholder {
   font-size: 13px;
   color: #9C9EA6;
   font-style: italic;
 }
-.contact-information .container .contact-form form .name {
+.contact-information .container .contact-form #contactForm input.is-invalid, .contact-information .container .contact-form #contactForm select.is-invalid {
+  border-color: red;
+  box-shadow: 0 0 5px rgba(255, 0, 0, 0.5);
+}
+.contact-information .container .contact-form #contactForm input.is-valid, .contact-information .container .contact-form #contactForm select.is-valid {
+  border-color: green;
+  box-shadow: 0 0 5px rgba(0, 255, 0, 0.5);
+}
+.contact-information .container .contact-form #contactForm input:hover, .contact-information .container .contact-form #contactForm select:hover {
+  border-color: var(--color-primary);
+}
+.contact-information .container .contact-form #contactForm input:focus, .contact-information .container .contact-form #contactForm select:focus {
+  border-color: var(--color-accent);
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+}
+.contact-information .container .contact-form #contactForm .input-form-group {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding-bottom: 10px;
+}
+.contact-information .container .contact-form #contactForm .input-form-group input {
+  padding: 20px 10px;
+  border: 1px solid #9C9EA6;
+  color: var(--color-dark);
+  outline: none;
+}
+.contact-information .container .contact-form #contactForm .input-form-group input::placeholder {
+  font-size: 13px;
+  color: #9C9EA6;
+  font-style: italic;
+}
+.contact-information .container .contact-form #contactForm .input-form-group span.form-input-error {
+  position: absolute;
+  top: -5px;
+  left: 0;
+  color: red;
+  font-size: 12px;
+  display: none;
+}
+.contact-information .container .contact-form #contactForm .input-form-group span.form-input-error.form-invalid-input {
+  display: block;
+}
+.contact-information .container .contact-form #contactForm .name {
   grid-area: name;
 }
-.contact-information .container .contact-form form .phone {
+.contact-information .container .contact-form #contactForm .phone {
   grid-area: phone;
 }
-.contact-information .container .contact-form form .email {
+.contact-information .container .contact-form #contactForm .email {
   grid-area: email;
 }
-.contact-information .container .contact-form form select {
+.contact-information .container .contact-form #contactForm select {
   grid-area: select;
   padding: 20px 10px;
   border: 1px solid #9C9EA6;
@@ -4173,16 +4270,16 @@ h6 {
   width: 50%;
 }
 @media (min-width: 768px) {
-  .contact-information .container .contact-form form select {
+  .contact-information .container .contact-form #contactForm select {
     width: auto;
   }
 }
-.contact-information .container .contact-form form button {
+.contact-information .container .contact-form #contactForm button {
   grid-area: button;
   width: 100%;
 }
 @media (min-width: 1400px) {
-  .contact-information .container .contact-form form button {
+  .contact-information .container .contact-form #contactForm button {
     justify-self: center;
     align-self: center;
     width: auto;

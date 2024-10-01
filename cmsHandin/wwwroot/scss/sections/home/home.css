@@ -183,47 +183,103 @@
     font-size: 13px;
   }
 }
-.about-us .container .content-right .form-content form {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-}
-@media (min-width: 1400px) {
-  .about-us .container .content-right .form-content form {
-    gap: 20px;
-  }
-}
-.about-us .container .content-right .form-content form input, .about-us .container .content-right .form-content form select {
+.about-us .container .content-right .form-content #aboutUsForm input, .about-us .container .content-right .form-content #aboutUsForm select {
   padding: 20px 10px;
   border: 1px solid #9C9EA6;
   color: var(--color-dark);
   outline: none;
   transition: border-color 0.3s ease, box-shadow 0.3s ease;
 }
-.about-us .container .content-right .form-content form input::placeholder, .about-us .container .content-right .form-content form select::placeholder {
+.about-us .container .content-right .form-content #aboutUsForm input::placeholder, .about-us .container .content-right .form-content #aboutUsForm select::placeholder {
   font-size: 13px;
   color: #9C9EA6;
   font-style: italic;
 }
-.about-us .container .content-right .form-content form input.is-invalid, .about-us .container .content-right .form-content form select.is-invalid {
+.about-us .container .content-right .form-content #aboutUsForm input.is-invalid, .about-us .container .content-right .form-content #aboutUsForm select.is-invalid {
   border-color: red;
   box-shadow: 0 0 5px rgba(255, 0, 0, 0.5);
 }
-.about-us .container .content-right .form-content form input.is-valid, .about-us .container .content-right .form-content form select.is-valid {
+.about-us .container .content-right .form-content #aboutUsForm input.is-valid, .about-us .container .content-right .form-content #aboutUsForm select.is-valid {
   border-color: green;
   box-shadow: 0 0 5px rgba(0, 255, 0, 0.5);
 }
-.about-us .container .content-right .form-content form input:hover, .about-us .container .content-right .form-content form select:hover {
+.about-us .container .content-right .form-content #aboutUsForm input:hover, .about-us .container .content-right .form-content #aboutUsForm select:hover {
   border-color: var(--color-primary);
 }
-.about-us .container .content-right .form-content form input:focus, .about-us .container .content-right .form-content form select:focus {
+.about-us .container .content-right .form-content #aboutUsForm input:focus, .about-us .container .content-right .form-content #aboutUsForm select:focus {
   border-color: var(--color-accent);
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
 }
-.about-us .container .content-right .form-content form a {
+.about-us .container .content-right .form-content #aboutUsForm .input-form-group {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding-bottom: 10px;
+}
+.about-us .container .content-right .form-content #aboutUsForm .input-form-group input {
+  padding: 20px 10px;
+  border: 1px solid #9C9EA6;
+  color: var(--color-dark);
+  outline: none;
+}
+.about-us .container .content-right .form-content #aboutUsForm .input-form-group input::placeholder {
+  font-size: 13px;
+  color: #9C9EA6;
+  font-style: italic;
+}
+.about-us .container .content-right .form-content #aboutUsForm .input-form-group span.form-input-error {
+  position: absolute;
+  top: -5px;
+  left: 0;
+  color: red;
+  font-size: 12px;
+  display: none;
+}
+.about-us .container .content-right .form-content #aboutUsForm .input-form-group span.form-input-error.form-invalid-input {
+  display: block;
+}
+.about-us .container .content-right .form-content #aboutUsForm select {
+  width: 100%;
+  padding: 20px 10px;
+  border: 1px solid #9C9EA6;
+  color: #535656;
+  outline: none;
+  margin-bottom: 10px;
+}
+.about-us .container .content-right .form-content #aboutUsForm button {
+  padding-top: 10px;
+  width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
+}
+.about-us .container .content-right .form-content input, .about-us .container .content-right .form-content select {
+  padding: 20px 10px;
+  border: 1px solid #9C9EA6;
+  color: var(--color-dark);
+  outline: none;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+.about-us .container .content-right .form-content input::placeholder, .about-us .container .content-right .form-content select::placeholder {
+  font-size: 13px;
+  color: #9C9EA6;
+  font-style: italic;
+}
+.about-us .container .content-right .form-content input.is-invalid, .about-us .container .content-right .form-content select.is-invalid {
+  border-color: red;
+  box-shadow: 0 0 5px rgba(255, 0, 0, 0.5);
+}
+.about-us .container .content-right .form-content input.is-valid, .about-us .container .content-right .form-content select.is-valid {
+  border-color: green;
+  box-shadow: 0 0 5px rgba(0, 255, 0, 0.5);
+}
+.about-us .container .content-right .form-content input:hover, .about-us .container .content-right .form-content select:hover {
+  border-color: var(--color-primary);
+}
+.about-us .container .content-right .form-content input:focus, .about-us .container .content-right .form-content select:focus {
+  border-color: var(--color-accent);
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
 }
 
 .container {

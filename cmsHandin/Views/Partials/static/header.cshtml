@@ -13,7 +13,8 @@
     var siteName = settings?.Value<string>("siteName") ?? ""; 
     var siteLogotype = settings?.Value<IPublishedContent>("siteLogotype")?.Url() ?? "";      
 
-    var selection = Model.Root().Children.Where(x => x.IsVisible(PublishedValueFallback)).ToArray();        
+    var selection = Model.Root().Children.Where(x => x.IsVisible(PublishedValueFallback)).ToArray();   
+    
 }
 
 <header>
@@ -57,7 +58,7 @@
                 @foreach (var item in selection)
                 {
                 var navTitle = item?.Value<string>("navTitle") ?? "";    
-                <a class="@(item.IsAncestorOrSelf(Model) ? "head-link-active" : "head-link")" href="@item.Url(PublishedUrlProvider)" title="@navTitle">@navTitle</a>
+                <a class="@(item.IsAncestorOrSelf(Model) ? "head-link-active" : "head-link")" href="@item.Url(PublishedUrlProvider)" title="@navTitle">@item.Name</a>
                
                 }                              
             }
