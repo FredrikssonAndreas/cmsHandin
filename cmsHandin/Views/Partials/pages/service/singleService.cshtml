@@ -15,39 +15,33 @@
     var placeholderTextLeft = singleServiceLeft?.Value<string>("formPlaceholderText") ?? "";                 
 }
  
- <section class="service-details bg-light">
-    <div class="container">
+<section class="service-details bg-light">
+<div class="container">
 
-        <div class="content">
-            <nav>
-                <div class="header-nav">
-                    <h4>@titleLeft</h4>
-                    <img src="@leftImage" alt="About us nav image">
-                    <p>@textLeft</p>
-                </div>
+    <div class="content">
+        <nav>
+            <div class="header-nav">
+                <h4>@titleLeft</h4>
+                <img src="@leftImage" alt="About us nav image">
+                <p>@textLeft</p>
+            </div>
 
-                <div class="box bg-primary">
-                    <h4>@formTitle</h4>
-                    <p>@formText</p>
+            <div class="box bg-primary">
+                <h4>@formTitle</h4>
+                <p>@formText</p>
 
-                    <form>
-                        <input type="email" placeholder="@placeholderTextLeft">
-                        <button><i class="fa-regular fa-envelope"></i></button>
-                    </form>
-                </div>
-            </nav>
-
+                <form>
+                    <input type="email" placeholder="@placeholderTextLeft">
+                    <button><i class="fa-regular fa-envelope"></i></button>
+                </form>
+            </div>
+        </nav>
             
-            <div class="info">
-            
-                <img class="imgOne" src="@singleServiceImageOne" alt="Risk Management Image 1">
-
-                
-                    <p>@Model.Value("serviceContent")</p>
-                
-                    
-             </div>
-         </div>
+            <div class="info">            
+                <img class="imgOne" src="@singleServiceImageOne" alt="Risk Management Image 1">                
+                <p>@Model?.Value("serviceContent")</p>             
+            </div>
+    </div>
         
 
         <div class="question-form">

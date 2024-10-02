@@ -1,4 +1,5 @@
 ﻿using cmsHandin.Models;
+using cmsHandin.Services;
 using Microsoft.AspNetCore.Mvc;
 using Umbraco.Cms.Core.Cache;
 using Umbraco.Cms.Core.Logging;
@@ -12,11 +13,14 @@ namespace cmsHandin.Controllers
 {
     public class HomeSurfaceController : SurfaceController
     {
-        public HomeSurfaceController(IUmbracoContextAccessor umbracoContextAccessor, IUmbracoDatabaseFactory databaseFactory, ServiceContext services, AppCaches appCaches, IProfilingLogger profilingLogger, IPublishedUrlProvider publishedUrlProvider) : base(umbracoContextAccessor, databaseFactory, services, appCaches, profilingLogger, publishedUrlProvider)
+        private readonly EmailService _emailService;
+        public HomeSurfaceController(IUmbracoContextAccessor umbracoContextAccessor, IUmbracoDatabaseFactory databaseFactory, ServiceContext services, AppCaches appCaches, IProfilingLogger profilingLogger, IPublishedUrlProvider publishedUrlProvider, EmailService emailservice)
+            : base(umbracoContextAccessor, databaseFactory, services, appCaches, profilingLogger, publishedUrlProvider)
         {
+            _emailService = emailservice;
         }
 
-        public IActionResult HandleSubmit(HomePageFormModel form)
+        public async Task<IActionResult> HandleSubmit(HomePageFormModel form)
         {
             if (!ModelState.IsValid)
             {
@@ -36,29 +40,33 @@ namespace cmsHandin.Controllers
 
                 if (string.IsNullOrEmpty(form.Email))
                 {
-                    ViewData["error-email"] = "You must enter a valid email address";
+                    ViewData["error-email"] = "You must enter a valid email";
                 }
                 else if (ModelState.ContainsKey(nameof(form.Email)) && ModelState[nameof(form.Email)]?.Errors.Count > 0)
                 {
-                    ViewData["error-email"] = "Invalid email address ex: ex@domain.com";
+                    ViewData["error-email"] = "Invalid email address";
                 }
 
                 ViewData["error-phone"] = string.IsNullOrEmpty(form.Phone);
 
                 if (string.IsNullOrEmpty(form.Name))
                 {
-                    ViewData["error-phone"] = "You must enter a phone number";
+                    ViewData["error-phone"] = "You must enter your phone number";
                 }
                 else if (ModelState.ContainsKey(nameof(form.Phone)) && ModelState[nameof(form.Phone)]?.Errors.Count > 0)
                 {
-                    ViewData["error-phone"] = "Your phone number can only contain numbers";
+                    ViewData["error-phone"] = "Your phone number must be a valid phone number";
                 }
 
                 return CurrentUmbracoPage();
             }
+            string subject = "Bekräftelse: Vi har mottagit din information";
+            string plainTextContent = $"Hej {form.Name}, tack för att du kontaktade oss.";
+            string htmlContent = $"<strong>Hej {form.Name},</strong><br/>Tack för att du kontaktade oss.";
 
+            await _emailService.SendMessageAsync(form.Email, form.Name, subject, plainTextContent, htmlContent);
 
-            TempData["submitted"] = "We have succesfully recived your info";
+            TempData["submitted"] = "We have succesfully recived your request. A verification email is sent to the email you provided.";
             return RedirectToCurrentUmbracoPage();
         }
     }

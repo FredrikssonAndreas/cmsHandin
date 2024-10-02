@@ -4228,6 +4228,12 @@ h6 {
   flex-direction: column;
   gap: 10px;
   padding-bottom: 10px;
+  width: 90%;
+}
+@media (min-width: 768px) {
+  .contact-information .container .contact-form #contactForm .input-form-group {
+    width: auto;
+  }
 }
 .contact-information .container .contact-form #contactForm .input-form-group input {
   padding: 20px 10px;
@@ -4267,7 +4273,7 @@ h6 {
   color: #535656;
   outline: none;
   border-radius: 3px;
-  width: 50%;
+  width: 90%;
 }
 @media (min-width: 768px) {
   .contact-information .container .contact-form #contactForm select {
@@ -4276,7 +4282,7 @@ h6 {
 }
 .contact-information .container .contact-form #contactForm button {
   grid-area: button;
-  width: 100%;
+  width: 90%;
 }
 @media (min-width: 1400px) {
   .contact-information .container .contact-form #contactForm button {

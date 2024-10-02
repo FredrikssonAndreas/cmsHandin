@@ -91,6 +91,11 @@
                     flex-direction: column;
                     gap: 10px;
                     padding-bottom: 10px;
+                    width: 90%;
+
+                    @include tablet {
+                        width: auto;
+                    }
 
                     input {
                         padding: 20px 10px;
@@ -140,7 +145,7 @@
                     color: #535656;
                     outline: none;
                     border-radius: 3px;
-                    width: 50%;
+                    width: 90%;
 
                     @include tablet {
                         width: auto;
@@ -149,7 +154,7 @@
 
                 button {
                     grid-area: button;
-                    width: 100%;
+                    width: 90%;
 
                     @include desktop {
                         justify-self: center;

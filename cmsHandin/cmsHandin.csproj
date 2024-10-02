@@ -59,6 +59,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <PackageReference Include="SendGrid" Version="9.29.3" />
     <PackageReference Include="Umbraco.Cms" Version="14.2.0" />
   </ItemGroup>
 
