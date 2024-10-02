@@ -66,7 +66,7 @@ namespace cmsHandin.Controllers
 
             await _emailService.SendMessageAsync(form.Email, form.Name, subject, plainTextContent, htmlContent);
 
-            TempData["submitted"] = "We have succesfully recived your request. A verification email is sent to the email you provided.";
+            TempData["submitted"] = "We have succesfully recived your request, A verification email is sent to the email you provided.";
             return RedirectToCurrentUmbracoPage();
         }
     }
